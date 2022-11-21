@@ -55,7 +55,6 @@ public class RegistrationServiceTest {
                     .when(userRepository).saveUser(user);
             assertAll(
                     () -> assertTrue(registrationService.registerUser(user)),
-                    // TODO: Check why userRepository.saveUser method's behavior is not overridden by previous doThrow statement.
                     () -> assertThrows(UserAlreadyExistsException.class, () -> registrationService.registerUser(user)),
                     () -> verify(emailService, times(1)).sendVerificationEmail(user)
             );
