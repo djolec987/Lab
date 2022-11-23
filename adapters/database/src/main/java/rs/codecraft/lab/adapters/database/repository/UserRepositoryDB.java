@@ -1,12 +1,15 @@
-package rs.codecraft.lab.core.repository.fake;
+package rs.codecraft.lab.adapters.database.repository;
 
+import rs.codecraft.lab.adapters.database.repository.jpa.UserJpaRepository;
 import rs.codecraft.lab.core.entity.User;
 import rs.codecraft.lab.core.exception.SaveUserFailedException;
 import rs.codecraft.lab.core.repository.UserRepository;
 
 import java.util.List;
 
-public class UserRepositoryFake implements UserRepository {
+public class UserRepositoryDB implements UserRepository {
+
+    private UserJpaRepository userJpaRepository;
 
     @Override
     public User getUserByEmail(String email) {
