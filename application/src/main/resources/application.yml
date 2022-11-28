@@ -12,6 +12,3 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     enabled: true
-logging:
-  level:
-    root: debug
