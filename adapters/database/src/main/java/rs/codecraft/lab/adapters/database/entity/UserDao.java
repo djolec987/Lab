@@ -1,14 +1,15 @@
 package rs.codecraft.lab.adapters.database.entity;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name = "user")
 public class UserDao {
 
     @Id

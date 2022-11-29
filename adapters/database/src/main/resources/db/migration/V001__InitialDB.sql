@@ -1,3 +1,4 @@
+CREATE SEQUENCE public.hibernate_sequence;
 CREATE TABLE IF NOT EXISTS public.user(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
