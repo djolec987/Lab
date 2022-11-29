@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import rs.codecraft.lab.adapters.database.entity.UserDao;
+import rs.codecraft.lab.adapters.database.mapper.UserMapper;
 import rs.codecraft.lab.adapters.database.repository.jpa.UserJpaRepository;
 import rs.codecraft.lab.core.entity.User;
 import rs.codecraft.lab.core.exception.SaveUserFailedException;
@@ -25,7 +27,9 @@ public class UserRepositoryDB implements UserRepository {
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        List<UserDao> userDaoList = userJpaRepository.findAll();
+        List<User> users = UserMapper.INSTANCE.userDaoListToUserList(userDaoList);
+        return users;
     }
 
     @Override

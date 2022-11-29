@@ -20,11 +20,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAllUsers() {
-        if (userRepository != null) {
-            System.out.println("userRepository is not null");
-        } else {
-            System.out.println("userRepository is null");
-        }
         return userRepository.getAllUsers();
     }
 

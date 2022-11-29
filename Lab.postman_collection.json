@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "3f11130c-8823-417a-8c74-866caee22e2d",
+		"name": "Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
